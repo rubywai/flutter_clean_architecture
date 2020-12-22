@@ -5,7 +5,6 @@ abstract class ConnectionCheck{
  Future<bool> get isConnect;
 }
 
-@singleton
 @Injectable(as: ConnectionCheck)
 class ConnectionCheckImpl implements ConnectionCheck{
   final DataConnectionChecker connectionChecker;
@@ -14,5 +13,4 @@ class ConnectionCheckImpl implements ConnectionCheck{
 
   @override
   Future<bool> get isConnect => connectionChecker.hasConnection;
-
 }

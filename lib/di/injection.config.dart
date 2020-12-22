@@ -30,18 +30,20 @@ GetIt $initGetIt(
 }) {
   final gh = GetItHelper(get, environment, environmentFilter);
   final myModule = _$MyModule();
+  gh.lazySingleton<DataConnectionChecker>(() => myModule.dataConnection);
+  gh.lazySingleton<ApiService>(() => myModule.apiService(get<Dio>()));
+  gh.factory<ConnectionCheck>(
+      () => ConnectionCheckImpl(get<DataConnectionChecker>()));
+  gh.factory<Repository>(() => ContactRepositoryImpl(get<ApiService>()));
+  gh.factory<UpdateContact>(() => UpdateContact(get<Repository>()));
   gh.factory<AddContact>(() => AddContact(get<Repository>()));
   gh.factory<DeleteContact>(() => DeleteContact(get<Repository>()));
   gh.factory<GetContact>(() => GetContact(get<Repository>()));
-  gh.factory<GetContactCubit>(() => GetContactCubit());
-  gh.factory<UpdateContact>(() => UpdateContact(get<Repository>()));
+  gh.factory<GetContactCubit>(
+      () => GetContactCubit(get<GetContact>(), get<ConnectionCheck>()));
 
   // Eager singletons must be registered in the right order
-  gh.singleton<ConnectionCheckImpl>(
-      ConnectionCheckImpl(get<DataConnectionChecker>()));
   gh.singleton<Dio>(myModule.dio);
-  gh.singleton<ApiService>(myModule.apiService(get<Dio>()));
-  gh.singleton<ContactRepositoryImpl>(ContactRepositoryImpl(get<ApiService>()));
   return get;
 }
 

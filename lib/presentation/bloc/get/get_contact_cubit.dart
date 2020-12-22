@@ -9,16 +9,18 @@ import 'package:flutter_clean_architecture/domain/usage/get_contact.dart';
 import 'package:injectable/injectable.dart';
 
 part 'get_contact_state.dart';
+
+
 @injectable
 class GetContactCubit extends Cubit<GetContactState> {
-  final GetContact _getContact = getIt();
-  final ConnectionCheck _connectionCheck = getIt();
+  final GetContact _getContact;
+  final ConnectionCheck _connectionCheck;
 
-  GetContactCubit() : super(GetContactInitial());
-
+  GetContactCubit(this._getContact,this._connectionCheck) : super(GetContactInitial());
   void getContact() async {
     emit(GetContactLoading());
-    if (await _connectionCheck.isConnect) {
+    if (true) {
+      print('is connected');
       try {
         List<Contact> contact = await _getContact.getContact();
         emit(GetContactSuccess(contact));

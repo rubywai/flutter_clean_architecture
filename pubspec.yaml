@@ -34,6 +34,7 @@ dependencies:
   injectable: ^1.0.5
   equatable: ^1.2.5
   data_connection_checker: ^0.3.4
+  pull_to_refresh: ^1.6.3
 
 
 dev_dependencies:

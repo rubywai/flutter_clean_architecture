@@ -6,7 +6,6 @@ class ContactModel extends Contact {
   final String name;
   final String job;
   final String age;
-
   ContactModel(
       {@required this.id,
       @required this.name,
@@ -14,10 +13,10 @@ class ContactModel extends Contact {
       @required this.age});
 
   factory ContactModel.fromJson(Map<String, dynamic> json) => ContactModel(
-        id: json['name'] as String,
-        name: json['job'] as String,
-        job: json['age'] as String,
-        age: json['id'] as String,
+        id: json['job'] as String,
+        name: json['name'] as String,
+        job: json['job'] as String,
+        age: json['age'] as String,
       );
 
   Map<String, dynamic> toJson() => <String, dynamic>{

@@ -3,8 +3,8 @@ import 'package:flutter_clean_architecture/domain/entity/contact.dart';
 import 'package:flutter_clean_architecture/domain/repository/repository.dart';
 import 'package:injectable/injectable.dart';
 
-@singleton
-@Injectable(as : Repository)
+
+@Injectable(as: Repository)
 class ContactRepositoryImpl implements Repository{
   final ApiService _apiService;
   ContactRepositoryImpl(this._apiService);
