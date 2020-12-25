@@ -1,4 +1,4 @@
-import 'package:data_connection_checker/data_connection_checker.dart';
+import 'package:connectivity/connectivity.dart';
 import 'package:injectable/injectable.dart';
 
 abstract class ConnectionCheck{
@@ -7,10 +7,12 @@ abstract class ConnectionCheck{
 
 @Injectable(as: ConnectionCheck)
 class ConnectionCheckImpl implements ConnectionCheck{
-  final DataConnectionChecker connectionChecker;
-
-  ConnectionCheckImpl(this.connectionChecker);
-
   @override
-  Future<bool> get isConnect => connectionChecker.hasConnection;
+  // TODO: implement isConnect
+  Future<bool> get isConnect async {
+    var collectivity = await Connectivity().checkConnectivity();
+    return (collectivity == ConnectivityResult.mobile || collectivity == ConnectivityResult.wifi);
+  }
+
+
 }

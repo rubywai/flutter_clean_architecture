@@ -1,4 +1,4 @@
-import 'package:data_connection_checker/data_connection_checker.dart';
+
 import 'package:dio/dio.dart';
 import 'package:flutter_clean_architecture/data/api/api_service.dart';
 import 'package:get_it/get_it.dart';
@@ -19,7 +19,6 @@ abstract class MyModule{
   Dio get dio => Dio();
   @lazySingleton
   ApiService apiService(Dio dio) => ApiService(dio);
-  @lazySingleton
-  DataConnectionChecker get dataConnection => DataConnectionChecker();
+
 
 }

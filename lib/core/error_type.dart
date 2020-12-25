@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 
 class ErrorType{
-  ErrorType(DioError error,{int errorType}){
-    errorType = error.response.statusCode;
+  ErrorType(DioError error,{Function errorType}){
+    errorType(error.response.statusCode);
   }
 }
