@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_clean_architecture/domain/entity/contact.dart';
-import 'package:flutter_clean_architecture/presentation/bloc/get/get_contact_cubit.dart';
+import 'package:flutter_clean_architecture/features/contact_list/domain/entity/contact.dart';
+import 'package:flutter_clean_architecture/features/contact_list/presentation/bloc/get/get_contact_cubit.dart';
+
 
 class Home extends StatefulWidget {
   @override

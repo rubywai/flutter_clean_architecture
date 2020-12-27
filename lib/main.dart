@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_clean_architecture/di/injection.dart';
-import 'package:flutter_clean_architecture/presentation/bloc/get/get_contact_cubit.dart';
-import 'package:flutter_clean_architecture/presentation/screen/home.dart';
+
+import 'features/contact_list/presentation/bloc/get/get_contact_cubit.dart';
+import 'features/contact_list/presentation/screen/home.dart';
+
 
 void main() {
   configureDependencies();

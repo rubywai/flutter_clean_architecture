@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_architecture/domain/entity/contact.dart';
+import 'package:flutter_clean_architecture/features/contact_list/domain/entity/contact.dart';
+
 
 class ContactModel extends Contact {
   final String id;

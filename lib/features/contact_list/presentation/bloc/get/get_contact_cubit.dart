@@ -5,8 +5,8 @@ import 'package:flutter_clean_architecture/core/connection.dart';
 import 'package:flutter_clean_architecture/core/error_type.dart';
 import 'package:flutter_clean_architecture/core/no_network_exception.dart';
 import 'package:flutter_clean_architecture/di/injection.dart';
-import 'package:flutter_clean_architecture/domain/entity/contact.dart';
-import 'package:flutter_clean_architecture/domain/usage/get_contact.dart';
+import 'package:flutter_clean_architecture/features/contact_list/domain/entity/contact.dart';
+import 'package:flutter_clean_architecture/features/contact_list/domain/usage/get_contact.dart';
 import 'package:injectable/injectable.dart';
 
 part 'get_contact_state.dart';

@@ -1,4 +1,5 @@
-import 'package:flutter_clean_architecture/domain/repository/repository.dart';
+
+import 'package:flutter_clean_architecture/features/contact_list/domain/repository/repository.dart';
 import 'package:injectable/injectable.dart';
 @injectable
 class DeleteContact{

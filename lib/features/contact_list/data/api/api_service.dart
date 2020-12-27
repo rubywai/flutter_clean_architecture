@@ -1,6 +1,6 @@
 
 import 'package:dio/dio.dart';
-import 'package:flutter_clean_architecture/data/model/contact_model.dart';
+import 'package:flutter_clean_architecture/features/contact_list/data/model/contact_model.dart';
 import 'package:retrofit/http.dart';
 part 'api_service.g.dart';
 

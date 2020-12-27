@@ -1,8 +1,8 @@
 import 'package:flutter_clean_architecture/core/connection.dart';
 import 'package:flutter_clean_architecture/core/no_network_exception.dart';
-import 'package:flutter_clean_architecture/data/api/api_service.dart';
-import 'package:flutter_clean_architecture/domain/entity/contact.dart';
-import 'package:flutter_clean_architecture/domain/repository/repository.dart';
+import 'package:flutter_clean_architecture/features/contact_list/data/api/api_service.dart';
+import 'package:flutter_clean_architecture/features/contact_list/domain/entity/contact.dart';
+import 'package:flutter_clean_architecture/features/contact_list/domain/repository/repository.dart';
 import 'package:injectable/injectable.dart';
 
 

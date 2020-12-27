@@ -1,4 +1,6 @@
-import 'package:flutter_clean_architecture/domain/entity/contact.dart';
+
+
+import 'package:flutter_clean_architecture/features/contact_list/domain/entity/contact.dart';
 
 abstract class Repository{
   Future<List<Contact>> getContact();

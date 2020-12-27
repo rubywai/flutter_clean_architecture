@@ -5,19 +5,20 @@
 // **************************************************************************
 
 import 'package:dio/dio.dart';
+import 'package:flutter_clean_architecture/features/contact_list/data/api/api_service.dart';
+import 'package:flutter_clean_architecture/features/contact_list/data/repository/repositoryImpl.dart';
+import 'package:flutter_clean_architecture/features/contact_list/domain/repository/repository.dart';
+import 'package:flutter_clean_architecture/features/contact_list/domain/usage/add_contact.dart';
+import 'package:flutter_clean_architecture/features/contact_list/domain/usage/delete_contact.dart';
+import 'package:flutter_clean_architecture/features/contact_list/domain/usage/get_contact.dart';
+import 'package:flutter_clean_architecture/features/contact_list/domain/usage/update_contact.dart';
+import 'package:flutter_clean_architecture/features/contact_list/presentation/bloc/get/get_contact_cubit.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 
-import '../domain/usage/add_contact.dart';
-import '../data/api/api_service.dart';
 import '../core/connection.dart';
-import '../data/repository/repositoryImpl.dart';
-import '../domain/usage/delete_contact.dart';
-import '../domain/usage/get_contact.dart';
-import '../presentation/bloc/get/get_contact_cubit.dart';
 import 'injection.dart';
-import '../domain/repository/repository.dart';
-import '../domain/usage/update_contact.dart';
+
 
 /// adds generated dependencies
 /// to the provided [GetIt] instance
